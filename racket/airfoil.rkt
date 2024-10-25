@@ -56,6 +56,7 @@
 (define Y-LO (vector-map (lambda (yc yt th) (- yc (* yt (cos th))))
 			 Y-CAMBER Y-SIMETRIC THETA))
 
+(display Y-SIMETRIC)
 (plot (list (lines (vector-map (lambda (x y) (vector x y)) X-UP Y-UP) #:color "red")
             (lines (vector-map (lambda (x y) (vector x y)) X-LO Y-LO) #:color "red")
             (lines (vector-map (lambda (x y) (vector x y)) X-BASE Y-CAMBER) #:color "blue"))
